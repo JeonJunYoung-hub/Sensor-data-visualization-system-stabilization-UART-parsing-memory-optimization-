@@ -1,0 +1,21 @@
+# Local documents and exported artifacts
+*.docx
+*.pptx
+*.pdf
+~$*
+
+# Python / CircuitPython cache
+__pycache__/
+*.pyc
+
+# Arduino outputs
+build/
+*.hex
+*.elf
+*.bin
+
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
