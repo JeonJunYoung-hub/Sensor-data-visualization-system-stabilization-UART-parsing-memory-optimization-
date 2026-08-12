@@ -1,5 +1,7 @@
 # UART Communication Troubleshooting
 
+> A **DRI** side project.
+
 Case study and cleaned example code for debugging UART communication between an Arduino sensor controller and a CircuitPython LED matrix display controller.
 
 The project focuses on a common embedded failure mode: hardware is working, serial data is being transmitted, but the receiving display stays blank because the software parses partial UART packets too early.
@@ -10,6 +12,15 @@ The project focuses on a common embedded failure mode: hardware is working, seri
 - `circuitpython/metro_m4_led_matrix_uart/` - CircuitPython receiver for a Metro M4 RGB matrix setup. It buffers UART bytes until newline-delimited packets are complete before drawing text.
 - `docs/troubleshooting-case-study.md` - Root cause analysis and debugging notes.
 - `images/` - LED panel result photos.
+
+## Interfaces used
+
+**UART · I2C**
+
+| Interface | What it carries |
+|---|---|
+| UART | Newline-delimited packets, Arduino sender → CircuitPython Metro M4 receiver |
+| I2C | Two Sensirion SEN55 sensors behind a TCA9548A multiplexer |
 
 ## Communication Contract
 
